@@ -22442,14 +22442,6 @@ types:
               body:
                 application/json:
                   type: errorDetails
-          queryParameters:
-            langCode:
-              description: |
-                Specifies the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).
-
-                Additionally, the value can be set to `browser` to automatically detect the browser language being used by the viewer and display the disclosure in that language.
-              required: false
-              type: string
           (oas-summary): Gets the Electronic Record and Signature Disclosure for the account.
           (oas-tags):
             - AccountConsumerDisclosures
@@ -22516,6 +22508,10 @@ types:
             (ds-method): update
             (ds-service): Accounts
             (ds-in-sdk): true
+          uriParameters:
+            langCode:
+              description: 'The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to "browser" to automatically detect the browser language being used by the viewer and display the disclosure in that language.'
+              type: string
       /contacts:
         put:
           displayName: Contacts_PutContacts
@@ -26243,12 +26239,6 @@ types:
                       description: Error encountered.
                       body:
                         application/json:
-                          type: errorDetails
-                  queryParameters:
-                    langCode:
-                      description: ''
-                      required: false
-                      type: string
                   (oas-summary): Gets the Electronic Record and Signature Disclosure associated with the account.
                   (oas-tags):
                     - EnvelopeConsumerDisclosures
@@ -26271,11 +26261,6 @@ types:
                         body:
                           application/json:
                             type: errorDetails
-                    queryParameters:
-                      langCode:
-                        description: ''
-                        required: false
-                        type: string
                     (oas-summary): 'Reserved: Gets the Electronic Record and Signature Disclosure associated with the account.'
                     (oas-tags):
                       - EnvelopeConsumerDisclosures
